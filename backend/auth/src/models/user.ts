@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { Password } from '../services/password';
+import { PasswordHandler } from '../services/password';
 
 // An interface that describes the properties that
 // are required to create a user
@@ -30,6 +30,16 @@ const userSchema = new mongoose.Schema<UserDoc>({
 		type: String,
 		required: true
 	}
+}, {
+	toJSON: {
+		transform(doc, ret) {
+			ret.id = ret._id;
+
+			delete ret._id;
+			delete ret.password; // Removes the password from the users' JSON representation
+			delete ret.__v; // Removes the version key
+		}
+	}
 });
 
 // This wrapper function provides better type checking than new User()
@@ -39,7 +49,7 @@ userSchema.statics.build = (attrs: UserAttrs) => {
 
 userSchema.pre('save', async function(done) {
 	if (this.isModified('password')) {
-		const hashed = await Password.toHash(this.get('password'));
+		const hashed = await PasswordHandler.toHash(this.get('password'));
 
 		this.set('password', hashed);
 	}
