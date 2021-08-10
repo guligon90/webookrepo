@@ -24,12 +24,12 @@ interface UserDoc extends mongoose.Document {
 const userSchema = new mongoose.Schema<UserDoc>({
 	email: {
 		type: String,
-		required: true,
+		required: true
 	},
 	password: {
 		type: String,
-		required: true,
-	},
+		required: true
+	}
 });
 
 // This wrapper function provides better type checking than new User()
@@ -40,7 +40,7 @@ userSchema.statics.build = (attrs: UserAttrs) => {
 userSchema.pre('save', async function(done) {
 	if (this.isModified('password')) {
 		const hashed = await Password.toHash(this.get('password'));
-		
+
 		this.set('password', hashed);
 	}
 	done();

@@ -7,7 +7,6 @@ import { User } from '../models/user';
 import { BadRequestError } from '../errors/bad-request-error';
 import { RequestValidationError } from '../errors/request-validation-error';
 
-
 const router = express.Router();
 
 router.post('/api/users/signup', [
@@ -18,7 +17,7 @@ router.post('/api/users/signup', [
 		.trim()
 		.isLength({ min: 4, max: 20 })
 		.withMessage('Password must have betweeen 4 and 20 characters.')
-], 
+],
 async (req: Request, res: Response) => {
 	const errors = validationResult(req);
 
@@ -39,12 +38,12 @@ async (req: Request, res: Response) => {
 	// Generate JWT
 	const userJwt = jwt.sign({
 		id: user.id,
-		email: user.email,
+		email: user.email
 	}, 'asdf');
 
 	// Store it on the session object
 	req.session = {
-		jwt: userJwt,
+		jwt: userJwt
 	};
 
 	res.status(201).send(user);

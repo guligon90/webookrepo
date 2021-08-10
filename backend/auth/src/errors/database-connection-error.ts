@@ -2,7 +2,7 @@ import { CustomError } from './custom-error';
 
 class DatabaseConnectionError extends CustomError {
 	statusCode = 500;
-	reason = 'Failed to connect to the database.'
+	reason = 'Failed to connect to the database.';
 
 	constructor() {
 		super('Failed to connect to the database.');
@@ -13,7 +13,7 @@ class DatabaseConnectionError extends CustomError {
 
 	serializeErrors() {
 		return [
-			{ message: this.reason },
+			{ message: this.reason }
 		];
 	}
 }
