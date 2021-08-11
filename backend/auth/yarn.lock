@@ -745,10 +745,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@webookrepo/common@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@webookrepo/common/-/common-1.0.3.tgz#ed178767006432ed1c05936be1850349cfa57112"
-  integrity sha512-94MHP9Lxw7D0pnYwptfOcBwV3KbGvYXaVrS7+oR9si0MUrdPrwjDia2kaYSh1n1wC5lmyTju7t3rlx/tlKDp3w==
+"@webookrepo/commonp@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@webookrepo/commonp/-/commonp-1.0.2.tgz#0a4fe5d738c0a4d768f4a5f2c94a361e8883088b"
+  integrity sha512-9ZFoKKUWASKSCjENT/JTTL+volwCYuuMHvNLMrFaypP10Ah0wrXNoNXj6Ibq2zTx5pJqIUbuA+16KSSfu6BCEA==
   dependencies:
     "@types/cookie-session" "^2.0.43"
     "@types/express" "^4.17.13"
