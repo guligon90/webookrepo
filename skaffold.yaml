@@ -24,3 +24,11 @@ build:
         manual:
           - src: './**/*.js'
             dest: .
+    - image: webookrepo/books
+      context: ./backend/books
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
