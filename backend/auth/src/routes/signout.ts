@@ -6,7 +6,7 @@ router.post('/api/users/signout', (req, res) => {
 	// Empty the cookie containing the JWT
 	req.session = null;
 
-	res.status(204).send({});
+	res.send({});
 });
 
 export { router as signOutRouter };
