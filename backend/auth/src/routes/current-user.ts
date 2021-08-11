@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { currentUser } from '@webookrepo/common';
+import { currentUser } from '@webookrepo/commonp';
 
 const router = express.Router();
 

@@ -7,7 +7,7 @@ import { currentUserRouter } from './routes/current-user';
 import { signInRouter } from './routes/signin';
 import { signOutRouter } from './routes/signout';
 import { signUpRouter } from './routes/signup';
-import { errorHandler, NotFoundError } from '@webookrepo/common';
+import { errorHandler, NotFoundError } from '@webookrepo/commonp';
 
 const app = express();
 

@@ -3,7 +3,7 @@ import { body } from 'express-validator';
 import jwt from 'jsonwebtoken';
 
 import { User } from '../models/user';
-import { BadRequestError, validateRequest } from '@webookrepo/common';
+import { BadRequestError, validateRequest } from '@webookrepo/commonp';
 
 const router = express.Router();
 
