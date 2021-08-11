@@ -745,6 +745,19 @@
   dependencies:
     "@types/yargs-parser" "*"
 
+"@webookrepo/common@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@webookrepo/common/-/common-1.0.3.tgz#ed178767006432ed1c05936be1850349cfa57112"
+  integrity sha512-94MHP9Lxw7D0pnYwptfOcBwV3KbGvYXaVrS7+oR9si0MUrdPrwjDia2kaYSh1n1wC5lmyTju7t3rlx/tlKDp3w==
+  dependencies:
+    "@types/cookie-session" "^2.0.43"
+    "@types/express" "^4.17.13"
+    "@types/jsonwebtoken" "^8.5.4"
+    cookie-session "^1.4.0"
+    express "^4.17.1"
+    express-validator "^6.12.1"
+    jsonwebtoken "^8.5.1"
+
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
