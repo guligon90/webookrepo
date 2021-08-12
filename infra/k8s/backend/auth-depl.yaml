@@ -16,11 +16,13 @@ spec:
         - name: auth
           image: webookrepo/auth
           env:
-            - name: JWT_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: jwt-secret
-                  key: JWT_KEY
+          - name: MONGODB_URI
+            value: 'mongodb://auth-mongodb-srv:27017/authdb'
+          - name: JWT_KEY
+            valueFrom:
+              secretKeyRef:
+                name: jwt-secret
+                key: JWT_KEY
 ---
 apiVersion: v1
 kind: Service
