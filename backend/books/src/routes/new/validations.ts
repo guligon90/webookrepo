@@ -1,5 +1,7 @@
 import { body } from 'express-validator';
 
+import { ISBNHandler } from '../../services/isbn';
+
 const validations = [
 	body('title')
 		.not()
@@ -10,6 +12,7 @@ const validations = [
 		.isEmpty()
 		.isInt()
 		.isLength({ min: 13, max: 13 })
+		.custom(value => ISBNHandler.isValid(value))
 		.withMessage('ISBN must be informed as a 13-digit positive integer'),
 	body('author')
 		.not()
