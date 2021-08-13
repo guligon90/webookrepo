@@ -15,7 +15,7 @@ router.post('/api/users/signin', [
 	body('password')
 		.trim()
 		.notEmpty()
-		.withMessage('You must provide a password')
+		.withMessage('You must provide a password.')
 ],
 validateRequest,
 async (req: Request, res: Response) => {

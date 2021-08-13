@@ -14,7 +14,7 @@ router.post('/api/users/signup', [
 	body('password')
 		.trim()
 		.isLength({ min: 4, max: 20 })
-		.withMessage('Password must have betweeen 4 and 20 characters.')
+		.withMessage('Password must have between 4 and 20 characters.')
 ],
 validateRequest,
 async (req: Request, res: Response) => {
