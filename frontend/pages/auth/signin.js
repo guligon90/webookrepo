@@ -1,7 +1,7 @@
-import CredentialsInput from '../../components/auth/credentials-input';
+import { CredentialsInput } from '../../components';
 
 const SignIn = () => {
-  return <CredentialsInput authResource={'signin'} />;
+	return <CredentialsInput authResource={'signin'} />;
 };
 
 export default SignIn;
